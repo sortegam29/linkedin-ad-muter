@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "LinkedIn Ad Muter",
+    "version": "1.0",
+    "description": "Silencia automáticamente los anuncios molestos en LinkedIn.",
+    "permissions": ["https://www.linkedin.com/*", "activeTab", "scripting"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.linkedin.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
